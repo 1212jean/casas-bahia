@@ -1,0 +1,312 @@
+<html><head><base href="/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casas Bahia - Tudo para sua casa</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+.header {
+    background: #0046be;
+    color: white;
+    padding: 1rem;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 2rem;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.banner {
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('https://images.unsplash.com/photo-1484154218962-a197022b5858') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.deals {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 200px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.current-price {
+    font-size: 1.5rem;
+    color: #0046be;
+    font-weight: bold;
+}
+
+.installments {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.buy-button {
+    background: #ffcd00;
+    color: #000;
+    border: none;
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.buy-button:hover {
+    background: #ffd700;
+}
+
+.categories {
+    padding: 2rem;
+    background: #fff;
+}
+
+.category-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.category-card {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.category-card:hover {
+    background: #e8e8e8;
+}
+
+footer {
+    background: #002a70;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Casas Bahia</div>
+            <div class="search-bar">
+                <input type="text" placeholder="O que você está procurando?">
+            </div>
+            <div class="nav-links">
+                <a href="https://www.casasbahia.com.br/minha-conta">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    Minha Conta
+                </a>
+                <a href="https://www.casasbahia.com.br/carrinho">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
+                    Carrinho
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Mega Ofertas</h1>
+            <p>Até 70% de desconto em milhares de produtos</p>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>Eletrodomésticos</h3>
+            </div>
+            <div class="category-card">
+                <h3>Móveis</h3>
+            </div>
+            <div class="category-card">
+                <h3>Smartphones</h3>
+            </div>
+            <div class="category-card">
+                <h3>TVs</h3>
+            </div>
+            <div class="category-card">
+                <h3>Informática</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="deals">
+        <h2>Ofertas do Dia</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">Smart TV 50"</div>
+                <div class="product-info">
+                    <h3>Smart TV LED 50" 4K UHD</h3>
+                    <p class="original-price">R$ 3.999,00</p>
+                    <p class="current-price">R$ 2.799,00</p>
+                    <p class="installments">10x de R$ 279,90 sem juros</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">Geladeira Frost Free</div>
+                <div class="product-info">
+                    <h3>Geladeira Frost Free 400L</h3>
+                    <p class="original-price">R$ 4.599,00</p>
+                    <p class="current-price">R$ 3.799,00</p>
+                    <p class="installments">12x de R$ 316,58 sem juros</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">Smartphone</div>
+                <div class="product-info">
+                    <h3>Smartphone 128GB 5G</h3>
+                    <p class="original-price">R$ 2.499,00</p>
+                    <p class="current-price">R$ 1.999,00</p>
+                    <p class="installments">10x de R$ 199,90 sem juros</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Atendimento</h3>
+                <p>0800 123 4567</p>
+                <p>atendimento@casasbahia.com.br</p>
+            </div>
+            <div>
+                <h3>Sobre Nós</h3>
+                <p>Nossa História</p>
+                <p>Trabalhe Conosco</p>
+            </div>
+            <div>
+                <h3>Ajuda</h3>
+                <p>Como Comprar</p>
+                <p>Política de Trocas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.querySelectorAll('.buy-button').forEach(button => {
+        button.addEventListener('click', () => {
+            alert('Produto adicionado ao carrinho!');
+        });
+    });
+
+    document.querySelector('.search-bar input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            alert('Pesquisando por: ' + this.value);
+        }
+    });
+
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const category = this.querySelector('h3').textContent;
+            alert('Navegando para categoria: ' + category);
+        });
+    });
+    </script>
+</body></html>
